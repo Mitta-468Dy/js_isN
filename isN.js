@@ -56,6 +56,10 @@ function isN(instr, modtype){
                     reval = false;
                 }
             }
+            //Ver0.06 虚無文字列もfalseへ
+            if(instr == ""){
+                reval = false;
+            }
         }
 
         //小数点があるか判別
