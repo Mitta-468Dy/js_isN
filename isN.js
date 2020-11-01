@@ -18,7 +18,9 @@ const ACCOUNTING_NUM = 32;
 function isN(instr, modtype){
     let reval = true;                                       //返り
     //instrが条件に一致した数値かを判断してboolean型のデータを返します。
-    if(modtype > 63){
+
+    //そもそもmodtypeが整数でなかったり、範囲外であるとき
+    if(modtype > 63 || modtype < 0 || Number.isInteger(modtype) == false || isNaN(modtype)){
         console.log("invalid modtype");
     }else{
         //,は無視
@@ -67,7 +69,7 @@ function isN(instr, modtype){
             }
         }
 
-        reval = !isNaN(instr);              //もっとも簡単
+        reval = reval == true ? !isNaN(instr) : false;
 
         //ここまで来たら文字系処理はtrueなので、数値化する
         let val = parseFloat(instr);
