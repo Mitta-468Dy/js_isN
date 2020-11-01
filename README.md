@@ -123,5 +123,12 @@ Some value about `Type of check` has a designated name, defined as a constant va
 We don't need to credit me to use this plugin.
 This plugin is now developping.
 
+## Known issues
+<ul>
+  <li>pass</li>
+  <del><li>If we specify "" for 1st operand, function returns True -> 0x01</li></del>
+</ul>
+
 ## Release Note
+Ver0.06 Fixed a problem 0x01.
 Ver0.05 Public release.
